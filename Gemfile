@@ -36,6 +36,10 @@ gem 'hirb-unicode' # => HirbのUnicode対応版。日本語が入っていても
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  
+  gem 'rails_12factor', '0.0.2'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

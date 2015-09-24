@@ -34,8 +34,8 @@ handler.buildMap
       
        function(){
         //マーカーを追加していく
+        markers = handler.addMarkers(<%== @ash.to_json %>);
         markers = handler.addMarkers(<%== @hash.to_json %>);
-      
         
   handler.bounds.extendWith(markers);
   handler.getMap().setZoom(yourValue);

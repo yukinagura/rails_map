@@ -19,9 +19,11 @@ test:
   port: 5432
 
 production:
-  adapter: postgresql
+   adapter: postgresql
   encoding: utf8
-  database: db8d940pp391pn
-  username: zodhmgkndbupvt
-  password: wadP5Z3ZZPCUiHJAtC2yg5FH5h
+  database: postgres
+  pool: 5
+  username: postgres
+  password: 2smmo523ab
+  host: localhost
   port: 5432

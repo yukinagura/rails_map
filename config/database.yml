@@ -19,7 +19,7 @@ test:
   port: 5432
 
 production:
-   adapter: postgresql
+  adapter: postgresql
   encoding: utf8
   database: postgres
   pool: 5

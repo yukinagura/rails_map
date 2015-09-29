@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require "csv"
+
+CSV.foreach('db/event.csv') do |row|
+  User.create(:title => row[0], :description => row[1], :address => row[2], :latitude => row[3], :longitude => row[4], :event_day => row[5])
+end

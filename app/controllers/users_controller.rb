@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
 
 
-  @alone = User.find(1)
+  @alone = User.find(6)
   @hash = Gmaps4rails.build_markers(@alone) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
@@ -71,6 +71,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
+
     end
   end
 
